@@ -38,6 +38,7 @@
 
 
 .logo
+  color: #fff
   display: block
   width: 100%
   img

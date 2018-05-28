@@ -51,6 +51,7 @@
   import MainArticle from '@/components/MainArticle'
   export default {
     name: 'HomePage',
+    transition: 'page-transition',
     components: {
       MainArticle
     }

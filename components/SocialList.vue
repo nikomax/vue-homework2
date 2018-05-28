@@ -51,6 +51,7 @@
       &:not(:last-child)
         margin-right: 10px
     &__link
+      transition: 0.3s
       display: flex
       height: 40px
       width: 40px
@@ -59,8 +60,13 @@
       align-items: center
       justify-content: center
       svg
+        transition: 0.3s
         height: 15px
         width: auto
         fill: #FFF
+      &:hover
+        background-color: #ffffff
+        svg
+          fill: #000
 
 </style>

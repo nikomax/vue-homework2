@@ -47,4 +47,11 @@
   .nav
     &__item
       display: inline-block
+      &:not(:last-child)
+        margin-right: 10px
+      a
+        transition: 0.3s
+        &:hover
+          opacity: 0.8
+          text-decoration: underline
 </style>

@@ -25,11 +25,14 @@ hr
   border: none
 
 .more-btn
+  background-color: transparent
   position: relative
   padding-left: 29px
   color: #000
   font-size: 16px
+  +HBold
   img
+    transition: 0.3s
     position: absolute
     left: 0
     top: 50%
@@ -37,6 +40,13 @@ hr
     display: block
     height: 22px
     width: 22px
+  &:hover
+    img
+      transform: rotate(90deg) translateX(-50%)
+  &.is-active
+    &:hover
+      img
+        transform: rotate(-90deg) translateX(-50%)
 
 .common-title
   text-align: center
@@ -47,3 +57,5 @@ hr
   p + p
     margin-top: 30px
 
+.nav
+  +HBold

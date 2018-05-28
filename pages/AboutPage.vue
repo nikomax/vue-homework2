@@ -75,6 +75,7 @@
 
   export default {
     name: 'AboutPage',
+    transition: 'page-transition',
     components: {
       TeamItem
     }
@@ -82,6 +83,13 @@
 </script>
 
 <style lang="sass">
+.page-transition-enter-active, .page-transition-leave-active
+  transition: all .5s
+
+.page-transition-enter, .page-transition-leave-to
+  transform: translateX(100%)
+  opacity: 0
+
 .team
   display: flex
   justify-content: center

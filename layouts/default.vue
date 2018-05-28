@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="template">
     <custom-header/>
      <nuxt/>
     <custom-footer/>
@@ -20,5 +20,6 @@
 
 <style lang="sass">
   @import sass/app
-
+  .template
+    overflow: hidden
 </style>
