@@ -72,10 +72,11 @@
 
 <script>
   import TeamItem from '@/components/TeamItem'
+  import pageTransition from '~/mixins/pageTransition'
 
   export default {
     name: 'AboutPage',
-    transition: 'page-transition',
+    mixins: [pageTransition],
     components: {
       TeamItem
     }

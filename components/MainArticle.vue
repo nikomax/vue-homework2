@@ -10,21 +10,18 @@
       <img :src="articleImage" alt="">
     </div>
     <div class="article__text">
-      <slot></slot>
+      {{ articleText }}
       <transition name="fade">
-        <p v-if="show">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti distinctio incidunt nobis? Ab
-          in, minus praesentium provident repellat sapiente sit voluptas. Commodi neque pariatur quisquam tempora?
-          Aperiam aspernatur autem cum distinctio, dolore doloribus ea enim maxime molestiae neque nisi perspiciatis
-          quam quia quibusdam quidem quod totam! Blanditiis maxime quibusdam repudiandae?</p>
+        <p v-if="show">{{ articleHidden }}</p>
       </transition>
     </div>
-    <button class="more-btn" v-on:click="show = !show"><img src="../assets/more-icon.png" alt="">Read More</button>
+    <button class="more-btn" :class="{'is-active': show}" v-on:click="show = !show"><img src="../assets/more-icon.png" alt="">Read More</button>
   </article>
 </template>
 
 <script>
   export default {
-    props: ['articleTitle', 'articleDate', 'articleImage'],
+    props: ['articleTitle', 'articleDate', 'articleImage', 'articleText', 'articleHidden'],
     data() {
       return {
         show: false
